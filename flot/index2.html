@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>De-close Loan Department</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #eef2f7;
+            text-align: center;
+        }
+
+        .box {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            padding: 35px 25px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .top-logo {
+            width: 260px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+            transition: width 1.2s ease;
+            animation: slideDown 0.8s ease-in-out;
+        }
+
+        .top-logo.grow {
+            width: 100%;
+            max-width: 520px;
+            margin-bottom: 10px;
+        }
+
+        .main-heading {
+            font-size: 2em;
+            font-weight: 700;
+            color: #fff;
+            background: #0056b3;
+            display: inline-block;
+            padding: 14px 26px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            margin-bottom: 18px;
+            animation: pop 0.6s ease;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #333;
+            background: #f1f5f9;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .contact-heading, .terms-heading {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #fff;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            margin-bottom: 8px;
+        }
+
+        .contact-heading { background: #28a745; }
+        .terms-heading { background: #ffc107; cursor: pointer; }
+        .terms-heading:hover { background: #e6ac00; }
+
+        .contact-info {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 22px;
+        }
+
+        .terms-content {
+            font-size: 0.9em;
+            color: #222;
+            display: none;
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            line-height: 1.5;
+            margin: 12px auto 20px auto;
+            border-left: 4px solid #0056b3;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .next-button {
+            background: #007bff;
+            color: #fff;
+            font-weight: 700;
+            padding: 10px 28px;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            display: block;
+            margin: 18px auto 30px auto;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+
+        .next-button:hover { background: #0056b3; }
+
+        .customer-form {
+            display: none;
+            text-align: left;
+            margin-top: 5px;
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        .customer-form label {
+            font-weight: 700;
+            display: block;
+            margin: 10px 0 4px;
+            font-size: 0.95em;
+        }
+
+        .customer-form input {
+            width: 100%;
+            padding: 9px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            margin-bottom: 6px;
+        }
+
+        .customer-form input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 6px rgba(0,123,255,0.3);
+        }
+
+        .pay-button {
+            background: #28a745;
+            color: #fff;
+            font-weight: 700;
+            padding: 11px 32px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 16px auto 0 auto;
+            font-size: 1em;
+            animation: pop 0.5s ease;
+        }
+
+        .pay-button:hover { background: #218838; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.9); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" id="mainBox">
+
+    <img src="grow logo.png" class="top-logo" id="topLogo" alt="Logo">
+
+    <h1 class="main-heading" id="mainHeading">DE-CLOSE LOAN DEPARTMENT</h1>
+
+    <div class="description" id="descriptionText">
+        Loan Closure means fully repaying the loan and officially closing the loan account with the bank or lender.<br><br>
+        <strong>Simple explanation:</strong><br>
+        When you pay:<br>
+        - the entire remaining principal,<br>
+        - interest, and<br>
+        - any applicable charges,<br>
+        and the bank confirms that no amount is due, the loan is said to be closed (de-closed).<br><br>
+        After loan closure, you receive:<br>
+        - No Dues Certificate (NDC)<br>
+        - Loan Closure Letter<br>
+        - Increase CIBIL Score / Credit Report
+    </div>
+
+    <div class="contact-heading" id="contactUsHeading">Contact Us</div>
+    <div class="contact-info" id="contactUsInfo">
+        Email: info@example.com<br>
+        Phone: +91 12345 67890
+    </div>
+
+    <div class="terms-heading" id="termsHeading" onclick="toggleTerms()">Terms & Conditions</div>
+    <div class="terms-content" id="termsBox">
+        <strong>Terms & Conditions:-</strong><br><br>
+
+<br>For the purpose of these Terms and Conditions, The term "we", "us", "our" used anywhere on this page shall mean FLOT LOAN PIV. LTD. whose registered/operational office is 3rd Floor,  WINDSOR TOWER , SECTOR -6, NOIDA UTTAR PRADESH 201301 . "you", “your”, "user", “visitor” shall mean any natural or legal person who is visiting our website and/or agreed to purchase from us.<br>
+
+<br>Your use of the website and/or purchase from us are governed by following Terms and Conditions:<br>
+
+<br>The content of the pages of this website is subject to change without notice.<br> 
+
+<br>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.<br>
+
+<br>Your use of any information or materials on our website and/or product pages is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through our website and/or product pages meet your specific requirements.<br>
+
+<br>Our website contains material which is owned by or licensed to us. This material includes, but are not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.<br>
+
+<br>All trademarks reproduced in our website which are not the property of, or licensed to, the operator are acknowledged on the website.<br>
+
+<br>Unauthorized use of information provided by us shall give rise to a claim for damages and/or be a criminal offense.<br>
+
+<br>From time to time our website may also include links to other websites. These links are provided for your convenience to provide further information.<br>
+
+<br>You may not create a link to our website from another website or document without FLOT LOAN PIV LTD. prior written consent.<br>
+
+<br>Any dispute arising out of use of our website and/or purchase with us and/or any engagement with us is subject to the laws of India .<br>
+<br>We, shall be under no liability whatsoever in respect of any loss or damage arising directly or indirectly out of the decline of authorization for any Transaction, on Account of the Cardholder having exceeded the preset limit mutually agreed by us with our acquiring bank from time to time.<br>
+
+<br>Disclaimer: The above content is created at GROW CREDIT PIV LTD. sole discretion. The  shall not be liable for any content provided here and shall not be responsible for any claims and liability that may arise due to merchant’s non-adherence to it.</p>
+    </div>
+
+    <div class="next-button" id="nextBtn" onclick="activateForm()">Next</div>
+
+    <div class="customer-form" id="customerForm">
+        <label>Customer Name</label>
+        <input type="text" placeholder="Enter customer name">
+
+        <label>De-close Loan Amount</label>
+        <input type="number" placeholder="Enter amount">
+
+        <label>Registered Mobile No</label>
+        <input type="tel" placeholder="Enter mobile no">
+
+        <label>Registered Email</label>
+        <input type="email" placeholder="Enter email">
+
+        <button class="pay-button" onclick="openUPI()">Pay Now</button>
+    </div>
+
+</div>
+
+<script>
+function toggleTerms(){
+    var t = document.getElementById("termsBox");
+    t.style.display = t.style.display === "block" ? "none" : "block";
+}
+
+function activateForm(){
+    document.getElementById("descriptionText").style.display = "none";
+    document.getElementById("contactUsHeading").style.display = "none";
+    document.getElementById("contactUsInfo").style.display = "none";
+    document.getElementById("termsHeading").style.display = "none";
+    document.getElementById("termsBox").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+
+    document.getElementById("topLogo").classList.add("grow");
+    document.getElementById("customerForm").style.display = "block";
+}
+
+function openUPI(){
+    var inputs = document.querySelectorAll("#customerForm input");
+    for(var i = 0; i < inputs.length; i++){
+        if(inputs[i].value.trim() === ""){
+            alert("All fields are required!");
+            return;
+        }
+    }
+    var amount = document.querySelector('#customerForm input[type="number"]').value;
+    window.location.href = "upi://pay?pa=9598409423@naviaxis&pn=Aakash%20Shukla&am=" + amount + "&cu=INR";
+}
+</script>
+
+</body>
+</html>
